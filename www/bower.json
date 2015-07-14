@@ -1,0 +1,21 @@
+{
+  "name": "greekquiz",
+  "version": "0.0.0",
+  "authors": [
+    "Abraao Isvi <abraao.isvi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "mustache": "~2.1.2",
+    "pouchdb": "~3.6.0",
+    "pouchdb-find": "~0.3.5"
+  }
+}
