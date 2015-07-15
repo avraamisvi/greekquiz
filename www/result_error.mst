@@ -1,0 +1,10 @@
+<div class="alert alert-danger" role="alert"> Oops! Resposta errada! </div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h5>A resposta certa era:</h5>
+    {{right.label}} ) {{right.text}}
+  </div>
+</div>
+
+<button type="button" class="btn btn-success" onclick="quiz.next()">Próximo</button>

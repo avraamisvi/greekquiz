@@ -1,0 +1,29 @@
+
+<label for="subgroups_sel" class="col-sm-2 control-label">Opções</label>
+
+<select id="subgroups_sel" class="form-control">
+  <option value="0">Todos</option>
+
+  {{#option.subgroups}}
+
+    <option value="{{tag}}">{{label}}</option>
+
+  {{/option.subgroups}}
+
+</select>
+
+<div class="radio">
+  <label>
+    <input type="radio" name="questionsRadio" id="radio_max_questions" value="{{max_questions}}" checked>
+      Todas as questões (total de {{max_questions}})
+  </label>
+</div>
+
+<div class="radio">
+  <label>
+    <input type="radio" name="questionsRadio" id="radio_min_questions" value="{{min_questions}}">
+      {{min_questions}} questões.
+  </label>
+</div>
+
+<button class="btn btn-default" type="submit" onclick="home.run()">Jogar</button>

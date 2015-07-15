@@ -1,0 +1,18 @@
+<form>
+<h4>{{question.title}}</h4>
+
+{{#question.answers}}
+
+  <div class="radio">
+    <label>
+      <input type="radio" name="answersRadio" id="optionsRadios_{{label}}" value="{{label}}"
+      onclick="quiz.selectAnswer('{{label}}')">
+        {{label}}) {{text}}
+    </label>
+  </div>
+
+{{/question.answers}}
+
+<button type="button" class="btn btn-success" onclick="quiz.submitAnswer()">Submeter</button>
+
+</form>

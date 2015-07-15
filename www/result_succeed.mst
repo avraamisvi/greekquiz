@@ -1,0 +1,3 @@
+<div class="alert alert-success" role="alert"> Parabéns! Resposta certa! </div>
+
+<button type="button" class="btn btn-success" onclick="quiz.next()">Próximo</button>

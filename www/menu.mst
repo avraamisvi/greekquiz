@@ -1,0 +1,7 @@
+<h4>Escolha uma opção:</h4>
+
+{{#home.options}}
+
+  <button class="btn btn-default" id="menu_option_{{_id}}" onclick="home.start('{{_id}}')">{{label}}</button>
+
+{{/home.options}}

@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- 
+
 var remoteCouch = false;
 
 var app = {
@@ -30,6 +30,13 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+
+        var cord = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
+
+        if(!cord) {
+          home.showMenu();
+          console.log("desktop");
+        }
     },
     // deviceready Event Handler
     //
