@@ -3,7 +3,8 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h5>A resposta certa era:</h5>
-    {{right.label}} ) {{right.text}}
+    {{right.label}} ) {{right.text}} <br clear="all"/>
+    {{right.explanation}}
   </div>
 </div>
 

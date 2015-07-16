@@ -4,7 +4,7 @@ var quiz = {
     {
       title: "\u0051\u0075\u0061\u006C\u0020\u00E9\u0020\u0065\u0073\u0074\u0061\u0020\u0066\u006F\u0072\u006D\u0061\u0020\u0064\u0065\u0020\u03BB\u03CD\u03C9\u0020\u003F",
       answers: [
-        {label:"a", text:"1a pessoa do presente do indicativo ativo singula."},
+        {label:"a", text:"1a pessoa do presente do indicativo ativo singula.", explanation: "Significado de λύω: (eu) desato."},
         {label:"b", text:"1a pessoa do presente do indicativo ativo plural."},
         {label:"c", text:"1a pessoa do futuro do indicativo ativo singular."},
         {label:"d", text:"3a pessoa do futuro do indicativo passivo/médio singular."}
@@ -12,10 +12,10 @@ var quiz = {
       correct: 0
     },
     {
-      title: "Qual é esta forma de λύετε ?",
+      title: "Qual é esta forma de λύετε?",
       answers: [
         {label:"a", text:"1a pessoa do presente do indicativo ativo singular."},
-        {label:"b", text:"2a pessoa do presente do indicativo ativo plural."},
+        {label:"b", text:"2a pessoa do presente do indicativo ativo plural.", explanation: "Significado de λύετε: (vós) desatais."},
         {label:"c", text:"1a pessoa do futuro do indicativo ativo singular."},
         {label:"d", text:"3a pessoa do futuro do indicativo passivo/médio singular."}
       ],
@@ -29,13 +29,13 @@ var quiz = {
   max: 2,
   selected: null,
 
-  start: function (subgroup, max_questions) {
+  start: function (quiz_id, max_questions) {
     this.atual= 0;
     this.points= 0;
     this.errors= 0;
     this.max= max_questions;
 
-    this.loadQuestions(subgroup);
+    this.loadQuestions(quiz_id);
 
     $.get('quiz.mst', function(template) {
       var rendered = Mustache.render(template, {config: {}});
@@ -45,8 +45,14 @@ var quiz = {
 
   },
 
-  loadQuestions: function() {
+  loadQuestions: function(quiz_id) {
 //se as questos carregadas forem maior que o maximo, o maximo  permanece, senao se menor, muda para o total de questoes na lista.
+    console.log(data);
+
+    $.get('data/'+quiz_id+'.js', function(data) {
+      console.log(data);
+    });
+
   },
 
   rightAnswer: function() {
@@ -99,7 +105,7 @@ var quiz = {
         var rendered = Mustache.render(template, {errors: quiz.errors, points: quiz.points, classification: quiz.getClassification()});
         $('#main_content').html(rendered);
       });
-    } else if(this.getPointsPercent() >= 70) {
+    } else if(this.getPointsPercent() >= 50) {
       $.get('final_result_b.mst', function(template) {
         var rendered = Mustache.render(template, {errors: quiz.errors, points: quiz.points, classification: quiz.getClassification()});
         $('#main_content').html(rendered);

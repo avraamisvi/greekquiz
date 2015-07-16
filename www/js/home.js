@@ -3,14 +3,14 @@ var home = {
   menu: {
     options: [
       {
-        _id:"idasdsadsa", label: "Quiz do presente do indicativo.",
+        _id:"indicativo", label: "Quiz do presente do indicativo.",
         subgroups: [
           {tag:"A", label:"ativo"},
           {tag:"P", label:"passivo/médio"}
         ],
         min_questions: 2,
         max_questions: 2
-       }
+      }
     ]
   },
 
@@ -48,6 +48,8 @@ var home = {
     } else {
       max = this.option_selected.min_questions;
     }
-    quiz.start(0,max);
+
+
+    quiz.start(this.option_selected._id, max);
   }
 }
