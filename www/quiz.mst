@@ -1,5 +1,5 @@
 <div id="quiz_content">
-  <div id="question_content">
-    
+  <div id="question_content" class="container-fluid" style="padding:2%;">
+
   </div>
 </div>

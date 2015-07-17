@@ -1,7 +1,23 @@
-<h4>Escolha uma opção:</h4>
+<div class="container-fluid" style="text-align:center;">
 
-{{#home.options}}
+<div class="row">
+  <div class="col-md-12">
 
-  <button class="btn btn-default" id="menu_option_{{_id}}" onclick="home.start('{{_id}}')">{{label}}</button>
+      <h1>κοινή Quiz</h1>
 
-{{/home.options}}
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <hr>
+
+        {{#home.options}}
+
+          <button class="btn btn-default" id="menu_option_{{_id}}" onclick="home.start('{{_id}}')">{{label}}</button>
+
+        {{/home.options}}
+
+    </div>
+  </div>
+</div>
