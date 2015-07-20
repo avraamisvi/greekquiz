@@ -2,9 +2,8 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <h5>Explicação:</h5>
     {{right.explanation}}
   </div>
 </div>
 
-<button type="button" class="btn btn-success" onclick="quiz.next()">Próximo</button>
+<button type="button" class="btn btn-primary" onclick="quiz.next()">Próximo</button>

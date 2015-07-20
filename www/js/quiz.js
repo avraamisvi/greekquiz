@@ -1,6 +1,6 @@
 var quiz = {
 
-  questions: [],
+  data: [],
 
   atual: 0,
   points: 0,
@@ -25,10 +25,10 @@ var quiz = {
   },
 
   loadQuestions: function(quiz_id) {
-//se as questos carregadas forem maior que o maximo, o maximo  permanece, senao se menor, muda para o total de questoes na lista.
+    //se as questos carregadas forem maior que o maximo, o maximo  permanece, senao se menor, muda para o total de questoes na lista.
     $.get('data/'+quiz_id+'.js', function(data) {
       data = eval("(" + data + ")")
-      quiz.questions = data.questions;
+      quiz.data = data;
     });
 
   },
@@ -38,7 +38,23 @@ var quiz = {
   },
 
   getQuestion: function() {
-    return this.questions[this.atual];
+
+    var quest = {
+        answers: [],
+    };
+
+    var qtsAtual = this.data.questions[this.atual];
+    var pattern = qtsAtual.patterns[Math.floor((Math.random() * 3))];
+
+    for(i = 0; i < pattern.length; i++) {
+      quest.answers.push({
+        label: ""+i,
+        text: this.data.answers[pattern[i]].text,
+        id: this.data.answers[pattern[i]].id
+      });
+    }
+
+    return quest;
   },
 
   selectAnswer: function(label) {
@@ -106,6 +122,7 @@ var quiz = {
 
   next: function() {
     this.atual++;
+    this.selected = null;
     if(this.atual >= this.max) {
       this.loadFinalResult();
     } else {

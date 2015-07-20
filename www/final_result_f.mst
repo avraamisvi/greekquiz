@@ -1,11 +1,12 @@
+<div id="question_content" class="container-fluid">
+  <div class="alert alert-danger" role="alert"> Que pena! Acertou: {{classification}} </div>
 
-<div class="alert alert-danger" role="alert"> Que pena! Acertou: {{classification}} </div>
-
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h5>Total de acertos: {{points}}</h5>
-    <h5>Total de errors: {{errors}}</h5>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h5>Total de acertos: {{points}}</h5>
+      <h5>Total de errors: {{errors}}</h5>
+    </div>
   </div>
-</div>
 
-<button type="button" class="btn btn-success" onclick="home.showMenu()">Menu</button>
+  <button type="button" class="btn btn-primary" onclick="home.showMenu()">Menu</button>
+</div>
