@@ -1,5 +1,5 @@
 <form>
-<h4>{{question.title}}</h4>
+<h4><strong>{{question.title}}</strong></h4>
 
 {{#question.answers}}
 

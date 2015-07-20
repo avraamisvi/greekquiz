@@ -54,6 +54,6 @@
     {id:8, text:"3a pessoa singular do presente do indicativo passivo/médio."},
     {id:9, text:"1a pessoa plural do presente do indicativo passivo/médio."},
     {id:10, text:"2a pessoa plural do presente do indicativo passivo/médio."},
-    {id:11, text:"3a pessoa plural do presente do indicativo passivo/médio."},
-  ],
+    {id:11, text:"3a pessoa plural do presente do indicativo passivo/médio."}
+  ]
 }
