@@ -1,18 +1,18 @@
 <form>
-<h4>{{question.title}}</h4>
+<h4><strong>{{question.title}}</strong></h4>
 
 {{#question.answers}}
 
   <div class="radio">
     <label>
       <input type="radio" name="answersRadio" id="optionsRadios_{{label}}" value="{{label}}"
-      onclick="quiz.selectAnswer('{{label}}')">
+      onclick="quiz.selectAnswer({{id}})">
         {{label}}) {{text}}
     </label>
   </div>
 
 {{/question.answers}}
 
-<button type="button" class="btn btn-success" onclick="quiz.submitAnswer()">Submeter</button>
+<button type="button" class="btn btn-primary" onclick="quiz.submitAnswer()">Submeter</button>
 
 </form>

@@ -1,20 +1,30 @@
-<div class="container-fluid" style="text-align:center;">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        κοινή Quiz
+      </a>
+    </div>
+  </div>
+</nav>
 
-<div class="row">
+<div class="container-fluid" style="margin-top:60px; text-align:center;">
+
+<!--div class="row">
   <div class="col-md-12">
 
       <h1>κοινή Quiz</h1>
 
   </div>
-</div>
+</div-->
+
 <div class="row">
     <div class="col-md-12">
 
-        <hr>
-
         {{#home.options}}
 
-          <button class="btn btn-default" id="menu_option_{{_id}}" onclick="home.start('{{_id}}')">{{label}}</button>
+          <button class="btn btn-primary" id="menu_option_{{_id}}" style="width:100%; margin-bottom:5px;" onclick="home.start('{{_id}}')">{{label}}</button>
+          <br clear="all" />
 
         {{/home.options}}
 

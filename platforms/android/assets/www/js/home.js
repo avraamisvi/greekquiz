@@ -6,7 +6,7 @@ var home = {
 
   showMenu: function() {
     $.get('menu.mst', function(template) {
-      $.get('data/menu.js', function(data) {
+      $.get('data/menu.dat', function(data) {
         data = eval("(" + data + ")");
         home.menu = data;
         var rendered = Mustache.render(template, {home: home.menu});

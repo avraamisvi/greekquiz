@@ -3,9 +3,9 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h5>A resposta certa era:</h5>
-    {{right.label}} ) {{right.text}} <br clear="all"/>
-    {{right.explanation}}
+    {{right.text}} <br clear="all"/>
+    {{explanation}}
   </div>
 </div>
 
-<button type="button" class="btn btn-success" onclick="quiz.next()">Próximo</button>
+<button type="button" class="btn btn-primary" onclick="quiz.next()">Próximo</button>

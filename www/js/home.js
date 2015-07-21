@@ -34,14 +34,9 @@ var home = {
   },
 
   run: function() {
-    var max = this.option_selected.max_questions;
-    if($("#radio_max_questions").prop( "checked" )) {
-      max = this.option_selected.max_questions;
-    } else {
-      max = this.option_selected.min_questions;
-    }
+    var start = parseInt($("#start_question").val());
+    var end = parseInt($("#end_question").val());
 
-
-    quiz.start(this.option_selected._id, max);
+    quiz.start(this.option_selected._id, start, end);
   }
 }

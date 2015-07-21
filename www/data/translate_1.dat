@@ -1,0 +1,171 @@
+{
+  questions: [
+    {
+      title: "Traduza: πληρόω",
+      explanation: "Significado de πληρόω: (eu) encho (a ponto de transbordar), completo, cumpro.",
+      correct: 0,
+      patterns: [
+        [0,2,3,4,5],
+        [3,4,0,2,5],
+        [0,2,3,4,5]
+      ]
+    },
+    {
+      title: "Traduza: ζάω",
+      explanation: "Significado de ζάω: (eu) vivo.",
+      correct: 1,
+      patterns: [
+        [0,2,3,4,5],
+        [3,4,0,2,5],
+        [0,5,3,4,2]
+      ]
+    },
+    {
+      title: "Traduza: λύω",
+      explanation: "Significado de λύω: (eu) desato, destruo, liberto.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: φανερόω",
+      explanation: "Significado de φανερόω: (eu) manifesto, revelo, mostro, dou a conhecer.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: τηρέω",
+      explanation: "Significado de τηρέω: (eu) guardo, observo.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: μένω",
+      explanation: "Significado de μένω: (eu) permaneço, fico.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: μέλλω",
+      explanation: "Significado de μέλλω: (eu) devo + {infinitivo}, estou prestes a + {infinitivo}, vou + {infinitivo}.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: βαπτίζω",
+      explanation: "Significado de βαπτίζω: (eu) batizo, mergulho, imerjo, lavo.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: γεννάω",
+      explanation: "Significado de γεννάω: (eu) gero, dou a luz; nascer (passivo).",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: αἰτέω",
+      explanation: "Significado de αἰτέω: (eu) peço, solicito, requeiro.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: αγαπάω",
+      explanation: "Significado de αγαπάω: (eu) amo.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: ὁμολογέω",
+      explanation: "Significado de ὁμολογέω: (eu) adminto, concordo, reconheço, confesso.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: ποιέω",
+      explanation: "Significado de ποιέω: (eu) faço.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+    {
+      title: "Traduza: μαρτυρέω",
+      explanation: "Significado de μαρτυρέω: (eu) testemunho, testifico.",
+      correct: 2,
+      patterns: [
+        [0,2,5,4,6],
+        [3,4,0,2,5],
+        [5,2,3,6,7]
+      ]
+    },
+  ],
+
+  answers: [
+    {id:0, text:"λύω."},
+    {id:1, text:"."},
+    {id:2, text:"."},
+    {id:3, text:"."},
+    {id:4, text:"."},
+    {id:5, text:"."},
+    {id:6, text:"."},
+    {id:7, text:"."},
+    {id:8, text:"."},
+    {id:9, text:"."},
+    {id:10, text:"."},
+    {id:11, text:"λύω."},
+    {id:12, text:"."},
+    {id:12, text:"."},
+    {id:14, text:"."},
+    {id:15, text:"."},
+    {id:16, text:"."},
+    {id:17, text:"."},
+    {id:18, text:"."},
+    {id:19, text:"."},
+    {id:20, text:"."},
+    {id:21, text:"."},
+  ],
+
+  randomize: false
+}

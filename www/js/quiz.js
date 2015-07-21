@@ -5,17 +5,24 @@ var quiz = {
   atual: 0,
   points: 0,
   errors: 0,
-  max: 2,
+  start: 0,
+  end: 0,
   selected: null,
 
-  start: function (quiz_id, max_questions) {
-    this.atual= 0;
-    this.points= 0;
-    this.errors= 0;
-    this.max= max_questions;
+  start: function (quiz_id, start, end) {
+    this.atual  = start-1;
+    this.points = 0;
+    this.errors = 0;
+
+    this.count = start-end;
+
+    if(this.count <= 0)
+      this.count = 1;
+
+    this.start = start;
+    this.end = end-1;
 
     this.loadQuestions(quiz_id);
-
   },
 
   loadQuestions: function(quiz_id) {
@@ -119,7 +126,7 @@ var quiz = {
   },
 
   getPointsPercent: function() {
-    return (this.points/this.max) * 100;
+    return (this.points/this.count) * 100;
   },
 
   getClassification: function() {
@@ -129,7 +136,7 @@ var quiz = {
   next: function() {
     this.atual++;
     this.selected = null;
-    if(this.atual >= this.max) {
+    if(this.atual >= this.end) {
       this.loadFinalResult();
     } else {
       this.loadQuestion();

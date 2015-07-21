@@ -8,4 +8,4 @@
   </div>
 </div>
 
-<button type="button" class="btn btn-success" onclick="home.showMenu()">Menu</button>
+<button type="button" class="btn btn-primary" onclick="home.showMenu()">Menu</button>
